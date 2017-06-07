@@ -2,7 +2,7 @@
   "name": "stromdao-bucketstore",
   "version": "0.0.1",
   "description": "Bucket Store to be aligned with StromDAO Energy Blockchain - to be used by Business Object",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -29,6 +29,12 @@ node.on('start', () => {
 	
 	server.route({
 		method: 'POST',
+		config: {
+        cors: {
+            origin: ['*'],
+            additionalHeaders: ['cache-control', 'x-requested-with']
+        }
+		},
 		path:'/put', 
 		handler: function (request, reply) {
 			//	console.log("REQUEST",request.payload);
@@ -51,6 +57,12 @@ node.on('start', () => {
 	server.route({
 		method: 'POST',
 		path:'/get', 
+		config: {
+        cors: {
+            origin: ['*'],
+            additionalHeaders: ['cache-control', 'x-requested-with']
+        }
+		},
 		handler: function (request, reply) {
 			//console.log();
 			node.object.get(request.payload.key,(err,node) => {
